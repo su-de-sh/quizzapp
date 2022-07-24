@@ -42,9 +42,9 @@ const App = () => {
   ) : (
     <div className="app">
       <div className="score-section">
-        <div>Your Score:</div>
-
-        <h3>{score}</h3>
+        <div>
+          Your Score: {score} out of {questionLength}
+        </div>
       </div>
     </div>
   );
