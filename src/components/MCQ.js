@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 export function MCQ({ questions }) {
+  const [questionNumber, setQuestionNumber] = useState(1);
+
+  // suffle
   function shuffle(array) {
     let currentIndex = array.length,
       randomIndex;
@@ -29,13 +32,23 @@ export function MCQ({ questions }) {
           <>
             {
               <>
-                <h3 className="question-section">{question.question}</h3>
+                <div className="question-section">
+                  <div className="question-count">
+                    <span>Question {questionNumber}</span>/{questionLength}
+                  </div>
+                  <div className="question-text">{question.question}</div>
+                </div>
                 <div className="answer-section">
                   {shuffle([
                     ...question.incorrectAnswers,
                     question.correctAnswer,
                   ]).map((answer, index) => (
-                    <button key={index}>{answer}</button>
+                    <button
+                      key={index}
+                      onClick={() => setQuestionNumber(questionNumber + 1)}
+                    >
+                      {answer}
+                    </button>
                   ))}
                 </div>
               </>
