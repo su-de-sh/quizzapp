@@ -19,26 +19,30 @@ export function MCQ({ questions }) {
 
     return array;
   }
+
+  let questionLength = questions.map((q) => q.question).length;
+
   return (
-    <div>
-      {questions.map((question) => (
-        <li key={question.id}>
-          {
-            <>
-              <h3>{question.question}</h3>
-              <ol>
-                {" "}
-                {shuffle([
-                  ...question.incorrectAnswers,
-                  question.correctAnswer,
-                ]).map((answer, index) => (
-                  <li key={index}>{answer}</li>
-                ))}
-              </ol>
-            </>
-          }
-        </li>
-      ))}
+    <div className="app">
+      {
+        questions.map((question) => (
+          <>
+            {
+              <>
+                <h3 className="question-section">{question.question}</h3>
+                <div className="answer-section">
+                  {shuffle([
+                    ...question.incorrectAnswers,
+                    question.correctAnswer,
+                  ]).map((answer, index) => (
+                    <button key={index}>{answer}</button>
+                  ))}
+                </div>
+              </>
+            }
+          </>
+        ))[Math.floor(Math.random() * questionLength)]
+      }
     </div>
   );
 }
