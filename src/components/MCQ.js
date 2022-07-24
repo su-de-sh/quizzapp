@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-export function MCQ({ questions }) {
-  const [questionNumber, setQuestionNumber] = useState(1);
-
+import React from "react";
+export function MCQ({ questions, questionNumber, checkAnswer }) {
   // suffle
   function shuffle(array) {
     let currentIndex = array.length,
@@ -23,8 +21,6 @@ export function MCQ({ questions }) {
     return array;
   }
 
-  let questionLength = questions.map((q) => q.question).length;
-
   return (
     <div className="app">
       {
@@ -33,9 +29,6 @@ export function MCQ({ questions }) {
             {
               <>
                 <div className="question-section">
-                  <div className="question-count">
-                    <span>Question {questionNumber}</span>/{questionLength}
-                  </div>
                   <div className="question-text">{question.question}</div>
                 </div>
                 <div className="answer-section">
@@ -43,10 +36,7 @@ export function MCQ({ questions }) {
                     ...question.incorrectAnswers,
                     question.correctAnswer,
                   ]).map((answer, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setQuestionNumber(questionNumber + 1)}
-                    >
+                    <button key={index} onClick={checkAnswer}>
                       {answer}
                     </button>
                   ))}
@@ -54,7 +44,7 @@ export function MCQ({ questions }) {
               </>
             }
           </>
-        ))[Math.floor(Math.random() * questionLength)]
+        ))[questionNumber]
       }
     </div>
   );
