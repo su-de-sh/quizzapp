@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "https://the-trivia-api.com/api/questions";
+const baseUrl = "http://localhost:3001/api/questions";
 const read = async () => {
   const response = await axios.get(baseUrl);
   return response.data;
