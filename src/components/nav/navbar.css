@@ -28,5 +28,5 @@ box-shadow: 0px 6px 7px 5px rgba(0,0,0,0.19);
 }
 .link:hover{
     color: navy;
-    transition: 1s ease;
+    /* transition: 1s ease; */
 }
