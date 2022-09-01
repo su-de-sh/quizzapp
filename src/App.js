@@ -54,13 +54,13 @@
 
 import React from "react";
 import Navbar from "./components/nav/Navbar";
-import Questions from "./components/quiz/Quiz";
+// import Questions from "./components/quiz/Quiz";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Questions />
+      {/* <Questions /> */}
     </div>
   );
 };
