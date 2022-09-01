@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const Question = require("./models/question");
-const insertAllData = require("./utility/helper_func");
+// const insertAllData = require("./utility/helper_func");
 require("dotenv").config();
 
 app.use(cors());
