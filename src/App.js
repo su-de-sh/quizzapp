@@ -52,14 +52,25 @@
 
 // export default App;
 
-import React from "react";
+import React, { useState } from "react";
+import Drawer from "./components/drawer/Drawer";
 import Navbar from "./components/nav/Navbar";
 // import Questions from "./components/quiz/Quiz";
 
 const App = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <div>
-      <Navbar />
+      <Navbar open={open} handleOpen={handleOpen} handleClose={handleClose} />
+      <Drawer open={open} handleClose={handleClose} />
       {/* <Questions /> */}
     </div>
   );

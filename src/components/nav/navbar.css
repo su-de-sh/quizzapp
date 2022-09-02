@@ -5,6 +5,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 100px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
     -webkit-box-shadow: 0px 6px 7px 5px rgba(0,0,0,0.19); 
 box-shadow: 0px 6px 7px 5px rgba(0,0,0,0.19);
 }
@@ -18,6 +21,7 @@ box-shadow: 0px 6px 7px 5px rgba(0,0,0,0.19);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: auto;
 }
 .link{
     text-decoration: none;
@@ -29,4 +33,20 @@ box-shadow: 0px 6px 7px 5px rgba(0,0,0,0.19);
 .link:hover{
     color: navy;
     /* transition: 1s ease; */
+}
+.hamburger_menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hamburger_menu{
+        display: flex;
+    }
+    .link_side{
+        display: none;
+    }
+    .logo{
+        font-size: medium;
+    }
 }
