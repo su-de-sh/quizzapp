@@ -55,6 +55,7 @@
 import React, { useState } from "react";
 import Backdrop from "./components/backdrop/Backdrop";
 import Drawer from "./components/drawer/Drawer";
+import Home from "./components/home/Home";
 import Navbar from "./components/nav/Navbar";
 // import Questions from "./components/quiz/Quiz";
 
@@ -73,6 +74,7 @@ const App = () => {
       <Navbar open={open} handleOpen={handleOpen} handleClose={handleClose} />
       <Backdrop handleClose={handleClose} open={open} />
       <Drawer open={open} handleClose={handleClose} />
+      <Home />
       {/* <Questions /> */}
     </div>
   );

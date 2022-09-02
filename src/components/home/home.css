@@ -1,0 +1,19 @@
+.home{
+    border: 1px solid green;
+}
+.container{
+    padding: 0 100px;
+}
+.intro{
+    display: flex;
+    
+}
+.intro-right{
+    flex: 6;
+    border: 1px solid black;
+    padding: 50px 0;
+
+}
+.intro-left{
+    flex: 6;
+}
