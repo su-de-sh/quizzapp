@@ -14,27 +14,27 @@ const Drawer = ({ open, handleClose }) => {
       <div className={sideDrawerClass.join(" ")}>
         <ul className="drawer_list">
           <li className="drawer_list_item">
-            <Home />
+            <Home sx={{ color: "navy" }} />
             <span className="drawer_list_item_name">Home</span>
           </li>
           <li className="drawer_list_item">
-            <Quiz />
+            <Quiz sx={{ color: "navy" }} />
             <span className="drawer_list_item_name">Quiz</span>
           </li>
           <li className="drawer_list_item">
-            <Info />
+            <Info sx={{ color: "navy" }} />
             <span className="drawer_list_item_name">About</span>
           </li>
           <li className="drawer_list_item">
-            <Phone />
+            <Phone sx={{ color: "navy" }} />
             <span className="drawer_list_item_name">Contact</span>
           </li>
           <li className="drawer_list_item">
-            <Login />
+            <Login sx={{ color: "navy" }} />
             <span className="drawer_list_item_name">Login</span>
           </li>
           <li className="drawer_list_item" onClick={handleClose}>
-            <Cancel className="drawer_list" />
+            <Cancel sx={{ color: "red" }} className="drawer_list" />
             <span className="drawer_list_item_name">Cancel</span>
           </li>
         </ul>
