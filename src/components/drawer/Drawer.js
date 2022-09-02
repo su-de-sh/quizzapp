@@ -11,7 +11,7 @@ const Drawer = ({ open, handleClose }) => {
 
   return (
     <div>
-      <div className={sideDrawerClass.join("")}>
+      <div className={sideDrawerClass.join(" ")}>
         <ul className="drawer_list">
           <li className="drawer_list_item">
             <Home />

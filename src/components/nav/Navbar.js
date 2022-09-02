@@ -26,7 +26,7 @@ const Navbar = ({ open, handleOpen, handleClose }) => {
           </Link>
         </div>
         <div className="hamburger_menu">
-          {open ? (
+          {!open ? (
             <>
               <Menu fontSize="large" onClick={handleOpen}></Menu>
             </>
