@@ -21,8 +21,7 @@ const Home = () => {
             </div>
             <div className="intro-left">
               <img
-                className="intro-pic"
-                src="../../../assets/quiz.svg"
+                src="../../../public/assets/undraw_Online_test_re_kyfx.png"
                 alt="pic"
               />
             </div>

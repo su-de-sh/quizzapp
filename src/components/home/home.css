@@ -6,7 +6,7 @@
 }
 .intro{
     display: flex;
-    
+    height: 100vh;
 }
 .intro-right{
     flex: 6;
@@ -16,4 +16,7 @@
 }
 .intro-left{
     flex: 6;
+}
+img{
+    width: 100%;
 }
