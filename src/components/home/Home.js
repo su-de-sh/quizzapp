@@ -10,15 +10,17 @@ const Home = () => {
         <div className="container">
           <div className="intro">
             <div className="intro-right">
-              <h1 className="title">Online quizz platform</h1>
-              <h1 className="title">for student</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <Button sx={{ background: "navy", color: "#ffffff" }}>
-                Learn more
-              </Button>
+              <div className="right-contain">
+                <h1 className="title">Online quizz platform</h1>
+                <h1 className="title">for student</h1>
+                <p className="loream">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <Button sx={{ background: "navy", color: "grey" }}>
+                  Learn more
+                </Button>
+              </div>
             </div>
             <div className="intro-left">
               <img src={picture} alt="pic" />
