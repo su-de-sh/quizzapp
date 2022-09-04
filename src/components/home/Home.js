@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React from "react";
+import picture from "../../img/undraw_Online_test_re_kyfx.png";
 import "./home.css";
 
 const Home = () => {
@@ -9,8 +10,8 @@ const Home = () => {
         <div className="container">
           <div className="intro">
             <div className="intro-right">
-              <h1>Online quizz platform</h1>
-              <h1>for student</h1>
+              <h1 className="title">Online quizz platform</h1>
+              <h1 className="title">for student</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -20,10 +21,7 @@ const Home = () => {
               </Button>
             </div>
             <div className="intro-left">
-              <img
-                src="../../../public/assets/undraw_Online_test_re_kyfx.png"
-                alt="pic"
-              />
+              <img src={picture} alt="pic" />
             </div>
           </div>
         </div>

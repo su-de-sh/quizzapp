@@ -20,3 +20,8 @@
 img{
     width: 100%;
 }
+.title{
+    color: navy;
+    font-weight: bolder;
+    /* font-size: xx-large; */
+}
