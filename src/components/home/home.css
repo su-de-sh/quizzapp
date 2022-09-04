@@ -1,4 +1,11 @@
-
+.home{
+    height: calc(100vh - 50px);
+    border: 1px solid pink;
+    position: absolute;
+    top: 50px;
+    display: flex;
+    align-items: center;
+}
 .container{
     padding: 0 100px;
 }
